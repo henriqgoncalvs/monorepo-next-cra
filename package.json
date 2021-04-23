@@ -1,0 +1,19 @@
+{
+  "name": "@monorepo/root",
+  "private": true,
+  "devDependencies": {
+    "craco": "^0.0.3",
+    "lerna": "^4.0.0",
+    "next-transpile-modules": "^6.4.0"
+  },
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "start:app": "lerna exec --scope @monorepo/app -- yarn start",
+    "start:landing": "lerna exec --scope @monorepo/landing -- yarn dev"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/**"
+    ]
+  }
+}
